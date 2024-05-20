@@ -16,4 +16,4 @@
 
 Запустить тесты из терминала можно такой командой:
 
-pytest tests/# Sprint_6
+pytest tests/ Sprint_6
