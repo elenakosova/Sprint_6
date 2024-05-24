@@ -34,4 +34,4 @@ class TestChekoutPath:
         order_page.tap_next_page_button()
         order_page.order_about_rental_page(date_piker, rental_period, color, comment)
         order_page.tap_order_final_button()
-        assert order_page.find_element(OrderPageLocators.ORDER_MODAL_HEADER_SUCCESSFULLY_PLACED)
+        assert order_page.check_displaying_of_button_check_status_of_order()

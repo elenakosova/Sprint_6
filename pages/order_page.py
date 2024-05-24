@@ -76,6 +76,7 @@ class OrderPage(BasePage):
     def set_comment_delivery(self, comment):
         self.send_keys(OrderPageLocators.INPUT_COMMENT, comment)
 
+    @allure.step("Заполняем все поля на второй странице заказа")
     def order_about_rental_page(self, date_piker, rental_period, color, comment):
         self.set_data_piker(date_piker)
         self.set_rental_period(rental_period)
@@ -88,3 +89,7 @@ class OrderPage(BasePage):
         self.wait_element_visibility_of_element_located(OrderPageLocators.ORDER_MODAL_HEADER)
         self.click_on_element(OrderPageLocators.ORDER_MODAL_SURE_BUTTON)
         assert self.find_element(OrderPageLocators.ORDER_MODAL_HEADER_SUCCESSFULLY_PLACED)
+
+    @allure.step('Проверить отображение кнопки "Посмотреть статус" после создания заказа')
+    def check_displaying_of_button_check_status_of_order(self):
+        return self.find_element(OrderPageLocators.button_check_status_of_order)

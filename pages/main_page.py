@@ -43,7 +43,6 @@ class MainPage(BasePage):
     @allure.step("Нажать на кнопку «Заказать» в хедере страницы")
     def tap_order_header_button(self):
         self.click_on_element(MainPageLocators.ORDER_BUTTON)
-        self.wait_element_visibility_of_element_located(OrderPageLocators.ORDER_HEADER)
 
     @allure.step("Проскролить до инструкции «Как это работает»")
     def scroll_to_middle_button(self):
@@ -54,4 +53,3 @@ class MainPage(BasePage):
     @allure.step("Нажать на кнопку «Заказать»")
     def tap_order_middle_button(self):
         self.click_on_element(MainPageLocators.ORDER_MIDDLE_BUTTON)
-        self.wait_element_visibility_of_element_located(OrderPageLocators.ORDER_HEADER)

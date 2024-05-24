@@ -53,3 +53,7 @@ class OrderPageLocators():
     ORDER_MODAL_HEADER = By.XPATH, "//div[@class = 'Order_ModalHeader__3FDaJ'and text()='Хотите оформить заказ?']"
     ORDER_MODAL_SURE_BUTTON = By.XPATH, "//div[@class = 'Order_Buttons__1xGrp']/button[text()='Да']"
     ORDER_MODAL_HEADER_SUCCESSFULLY_PLACED = By.XPATH, "//div[@class = 'Order_ModalHeader__3FDaJ'and text()='Заказ оформлен']"
+
+    # Подтверждение заказа
+    button_yes_confirm_order = (By.XPATH, "//button[text()='Да']")
+    button_check_status_of_order = (By.XPATH, ".//*[text()='Посмотреть статус']")
